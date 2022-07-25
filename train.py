@@ -80,7 +80,7 @@ model.add(Dense(total_words, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 history = model.fit(xs, ys, epochs=100, verbose=1)
 
-model.save("/home/ricky/Documents/code/lovecraft/l.h5")
+model.save("/home/ricky/Documents/code/lovecraft/l2.h5")
 
 seed_text = "what i saw in the garden was"
 next_words = 100
