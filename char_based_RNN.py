@@ -67,6 +67,6 @@ def next_char(text, temperature=1):
 def complete_text(text, n_chars=50, temperature=1):
     for _ in range(n_chars):
         text += next_char(text, temperature)
-        return text
+    return text
 
 print(complete_text("t", temperature=1))
