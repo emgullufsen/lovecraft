@@ -1,3 +1,6 @@
+#!/usr/bin/python3.9
+#-*- coding: utf-8 -*-
+
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
@@ -34,11 +37,9 @@ dataset = dataset.map(
 
 model = keras.models.Sequential([
         keras.layers.GRU(128, return_sequences=True, input_shape=[None, max_id],
-                         dropout=0.2, recurrent_dropout=0.2),
-                         dropout=0.2),
+            dropout=0.2),
         keras.layers.GRU(128, return_sequences=True,
-                         dropout=0.2, recurrent_dropout=0.2),
-                         dropout=0.2),
+            dropout=0.2),
         keras.layers.TimeDistributed(keras.layers.Dense(max_id,
                                                         activation="softmax"))
                 ])

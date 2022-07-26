@@ -68,19 +68,19 @@ for line in sentences:
 input_sequences = np.array(pad_sequences(input_sequences, maxlen=max_sequence_len, padding='pre'))
 
 # create predictors and label
-xs, labels = input_sequences[:,:-1],input_sequences[:,-1]
+# xs, labels = input_sequences[:,:-1],input_sequences[:,-1]
 
-ys = tf.keras.utils.to_categorical(labels, num_classes=total_words)
+# ys = tf.keras.utils.to_categorical(labels, num_classes=total_words)
 
-model = Sequential()
-model.add(Embedding(total_words, 16, input_length=max_sequence_len-1))
-model.add(Bidirectional(LSTM(32, return_sequences='True')))
-model.add(Bidirectional(LSTM(32)))
-model.add(Dense(total_words, activation='softmax'))
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-history = model.fit(xs, ys, epochs=100, verbose=1)
+# model = Sequential()
+# model.add(Embedding(total_words, 16, input_length=max_sequence_len-1))
+# model.add(Bidirectional(LSTM(32, return_sequences='True')))
+# model.add(Bidirectional(LSTM(32)))
+# model.add(Dense(total_words, activation='softmax'))
+# model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+# history = model.fit(xs, ys, epochs=100, verbose=1)
 
-model.save("/home/ricky/Documents/code/lovecraft/l2.h5")
+# model.save("/home/ricky/Documents/code/lovecraft/l2.h5")
 
 seed_text = "what i saw in the garden was"
 next_words = 100
