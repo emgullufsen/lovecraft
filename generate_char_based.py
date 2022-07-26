@@ -9,7 +9,13 @@ import numpy as np
 np.random.seed(42)
 tf.random.set_seed(42)
 
+with open("corpus/all.txt") as in_f:
+    lovecraft_text = in_f.read()
+
 model = tf.keras.models.load_model("lovecraft_charRNN.h5")
+tokenizer = tf.keras.preprocessing.text.Tokenizer(char_level=True)
+tokenizer.fit_on_texts(lovecraft_text)
+max_id = len(tokenizer.word_index) # number of distinct characters
 
 def preprocess(texts):
     X = np.array(tokenizer.texts_to_sequences(texts)) - 1
@@ -27,11 +33,4 @@ def complete_text(text, n_chars=50, temperature=1):
         text += next_char(text, temperature)
     return text
 
-with open("corpus/all.txt") as in_f:
-    lovecraft_text = in_f.read()
-
-tokenizer = tf.keras.preprocessing.text.Tokenizer(char_level=True)
-tokenizer.fit_on_texts(lovecraft_text)
-
-print(complete_text("t", temperature=1))
-print(complete_text("p", temperature=1))
+print(complete_text("i", temperature=1))
