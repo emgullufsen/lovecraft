@@ -21,7 +21,7 @@ This Character-based Recurrent Neural Network is based on ideas and code from:
 Géron
 
 #### IMPORTANT NOTES FOR RUNNING SCRIPTS: 
-Invoke with `python3 generate_char_based.py` to generate text the she-bang at
+Invoke with `python3 generate_char_based.py` to generate text. The she-bang at
 top of my scripts points right to python3.9 - this will likely not work unless
 you have that specific version installed. You can of course amend the she-bang
 line and invoke directly i.e. `./generate_char_based.py`. For convenience I
