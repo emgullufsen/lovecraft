@@ -33,4 +33,4 @@ def complete_text(text, n_chars=50, temperature=1):
         text += next_char(text, temperature)
     return text
 
-print(complete_text("i", temperature=1))
+print(complete_text("the", temperature=1))
