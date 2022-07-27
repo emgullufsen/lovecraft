@@ -20,6 +20,14 @@ This Character-based Recurrent Neural Network is based on ideas and code from:
 "Hands-on Machine Learning with Scikit-Learn, Keras & Tensorflow", by Aurélien
 Géron
 
+#### Example Invocation (seed text in generate_char_based.py is currently "the":
+`ricky@DOUGLAS-ENVY:~/Documents/code/lovecraft$ ./generate_char_based.py`
+`the used, itsaeposing kind which vadiably resembled a
+sane boys’ fragments, ahd thead fear church
+upon memork; he saw the fellew about the clothing: “dr. rays 1857—the dra some chroarence
+fear—south of castle and was paper stoning
+it tuems on, and appro`
+
 #### IMPORTANT NOTES FOR RUNNING SCRIPTS: 
 Invoke with `python3 generate_char_based.py` to generate text. The she-bang at
 top of my scripts points right to python3.9 - this will likely not work unless
