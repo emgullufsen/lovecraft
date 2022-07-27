@@ -1,4 +1,5 @@
-# lovecraft ##A Recurrent Neural Network built with Tensorflow - generates H.P.
+# lovecraft 
+##A Recurrent Neural Network built with Tensorflow - generates H.P.
 Lovecraft-ian text using a model trained on the British horror author's corpus
 
 ##Details about the scripts/notebooks `scrape.py` script grabs corpus (105
